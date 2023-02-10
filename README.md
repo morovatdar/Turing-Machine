@@ -27,7 +27,7 @@ in w with its corresponding character in wR.
 Step 5: If after some time no a’s or b’s remain, then the string must be in L.
   
 The above steps can be shown in details in the following transition graph.  
-![Fig1b](https://user-images.githubusercontent.com/83058686/218006790-06c03ac3-bdf3-4fbd-8beb-dbce0aa49c39.PNG)
+![Fig1b](https://user-images.githubusercontent.com/83058686/218009918-8b0f5d39-76af-47c7-a313-7d68ab8c5f5c.jpg)
 
 We saved the above Turing Machine in ’TM 1b.dat’ file, and loaded it in our Python code as a dictionary. 
 Running the code for different input strings shows that our Turing Machine works well and halts in a 
@@ -52,7 +52,7 @@ Step 4: Traveling back and forth this way, we subtract one by one from the secon
 Step 5: We then delete all the remaining characters of the second number and the ’+’ symbol. The read-write head also travel left to the leftmost character of the result number.  
   
 The above steps can be shown in details in the following transition graph.  
-![Fig2b](https://user-images.githubusercontent.com/83058686/218007857-85f730bc-b460-4b42-b635-ba22c02efd29.png)
+![Fig2b](https://user-images.githubusercontent.com/83058686/218009951-5105eb6c-ea50-4ab9-983a-51bdc569bc73.jpg)
 
 We saved the above Turing Machine in ’TM_2b.dat’ file, and loaded it in our Python code as a dictionary. 
 Running the code for different input strings shows that our Turing Machine works well.
@@ -61,12 +61,12 @@ Running the code for different input strings shows that our Turing Machine works
 First, we consider the following example, which is a Turing Machine that can multiply two unary numbers.  
 ![Fig3a](https://user-images.githubusercontent.com/83058686/218008216-f6747f5b-13cb-45b3-b02e-22fee95b809d.PNG)
 
-To implement the approach described in above example, I supposed the binary numbers to be multiplied are input to the Turing machine and are separated by a ’*’.
+To implement the approach described in above example, I supposed the binary numbers to be multiplied are input to the Turing machine and are separated by a ’\*’.
 
 We save the above Turing Machine in TM_3a.dat file, and load it in our Python code as a dictionary. 
 Running the code for different input strings shows that our Turing Machine can successfully multiply two unary numbers and halts in a final states.
 
-Next we try to solve Unary Division. It should be noted that the result of integer division has two parts, the quotient (Q) and the remainder (R), s.t. Dividend = Divisor*Q+R.  
+Next we try to solve Unary Division. It should be noted that the result of integer division has two parts, the quotient (Q) and the remainder (R), s.t. Dividend = Divisor\*Q+R.  
 To solve this problem, I supposed the unary numbers to be divided are input to the Turing machine and are separated by a ’/’. 
 The following steps describe the designed Turing Machine:  
 Step 1: Starting at the leftmost character of the first number (Dividend), we let the read-write head 
@@ -82,10 +82,10 @@ the operator ”/” and we change the first character of the divisor to ”R”
 Step 7: We change all x in the divisor to 1 and we delete all 1 remained in the divisor. And, we move 
 the read-write head back to the character R.  
 The result is in the form of R-Q-. The number after R is the remainder and the number after Q is the 
-quotient. The equation Dividend = Divisor*Q+R stands for the results.
+quotient. The equation Dividend = Divisor\*Q+R stands for the results.
   
 The above steps can be shown in details in the following transition graph  
-![Fig3b](https://user-images.githubusercontent.com/83058686/218009129-9346ec00-a300-4019-9f95-6ceb1d862cd4.png)
+![Fig3b](https://user-images.githubusercontent.com/83058686/218009977-a383e9a1-80ab-418f-9c96-8c636a85cd19.jpg)
   
 I saved the above Turing Machine in ’TM 3b.dat’ file, and loaded it in my Python code as a dictionary. 
 Running the code for different input strings shows that the Turing Machine works well. 
